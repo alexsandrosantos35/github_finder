@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Github finder</title>
+    <link rel="shortcut icon" href="https://www.github.com/github.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>
+           Git Hub finder <span></span>
+        </h1>
+        <div class="search-container">
+            <input type="text" class="query" value="" placeholder="Enter a user name">
+
+            <button type="button" onclick="getUser()">
+            <span class="material-icons-outline">search</span>
+        </button>
+        </div>
+    </header>
+    <main id="user-info">
+
+    </main>
+    <script src="main/finder.js"></script>
+</body>
+</html>
