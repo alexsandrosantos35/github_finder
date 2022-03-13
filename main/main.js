@@ -12,14 +12,21 @@ const USER = {
 };
 
 async function getRepos() {
-    const URL = `https://api.github.com/users/alexsandrosantos35/repos`;
+    const URL = `https://api.github.com/users/${QUERY.value}/repos`;
     const DATA = await fetch(URL);
     const REPOS = await DATA.json();
     USER.repos = REPOS;
-    console.table(USER.repos);
-   
+
+    if (typeof REPOS === Array) {
+        return console.table(USER.repos);
     }
 
-    getRepos();
 
+    else {
+        console.log(typeof REPOS);
 
+    }
+    
+}
+
+   getRepos();
